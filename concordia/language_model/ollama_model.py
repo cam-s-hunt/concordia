@@ -61,7 +61,7 @@ class OllamaLanguageModel(language_model.LanguageModel):
         channel: The channel to write the statistics to.
     """
     self._model_name = model_name
-    self._client = ollama.Client()
+    self._client = ollama.Client(host="192.168.1.194:11434")
     self._system_message = system_message
     self._terminators = []
 
